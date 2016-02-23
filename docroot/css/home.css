@@ -1,0 +1,17 @@
+body.home .related p {
+	margin-top:0;
+}
+body.home .related>label {
+	display: block;
+	margin-bottom: 0.5em;
+}
+body.home .content img {
+	border:1px solid rgba(0, 0, 0, 0.4);
+	height:7em;
+	float:left;
+	margin-right:0.5em;
+	margin-bottom:0.5em;
+}
+body.home .recent p {
+	margin-top:0;
+}

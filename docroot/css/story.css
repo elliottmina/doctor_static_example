@@ -1,0 +1,57 @@
+body.story .content {
+	margin-bottom:2em;
+}
+body.story .codehilite {
+	background-color: rgba(0, 0, 0, 0.1);
+	font-size: 0.9em;
+	padding:1em;
+}
+body.story table {
+	border:1px solid rgba(0, 0, 0, 0.5);
+}
+body.story th {
+	font-weight: bold;
+	padding:0.3em 0.6em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+body.story td {
+	padding:0.1em 0.6em;
+}
+body.story tbody tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+body.story .tags {
+	font-size: 0.9em;
+	margin-bottom:1em;	
+}
+body.story .tags ul {
+	display: inline;
+}
+body.story .tags li {
+	list-style: none;
+	display: inline;
+}
+body.story .tags li:after {
+	content: ", ";
+}
+body.story .tags li:last-child:after {
+	content: "";
+}
+body.story .related {
+	font-size: 0.9em;
+	margin-bottom:1em;	
+}
+body.story .related li {
+	list-style: none;
+	margin-bottom: 1em;
+}
+body.story .related p {
+	margin:0.2em 0;
+	font-size:0.9em;
+}
+body.story .content img {
+	border:1px solid rgba(0, 0, 0, 0.4);
+}
+body.story .by_when {
+	margin-top: 0;
+}

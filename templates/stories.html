@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% set title="Luctus suscipit" %}
+{% set body_class="stories" %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="../css/stories.css">
+{% endblock %}
+
+{% block content %}
+
+{{ content }}
+
+<ul>
+{% for key in chron_list %}
+	{% if manifest[key]['template'] == 'story.html' %}
+		<li>
+			<a href="{{ key }}.html">{{ manifest[key]['title'] }}</a>
+			<p>{{ manifest[key]['synopsis'] }}</p>
+		</li>
+	{% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}

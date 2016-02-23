@@ -1,0 +1,6 @@
+body.tag dt {
+	font-weight: bold;
+}
+body.tag dd {
+	margin-bottom: 1em;
+}

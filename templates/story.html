@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% set title=meta_data.title %}
+{% set body_class="story" %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="../css/story.css">
+<link rel="stylesheet" type="text/css" href="../css/code.css">
+{% endblock %}
+
+{% block content %}
+<h1>{{ meta_data.title }}</h1>
+<p class="by_when">{{ meta_data.author }}, {{ meta_data.create_date|strftime("%Y-%m-%d") }}
+
+<div class="content">
+	{{ content }}
+</div>
+
+<div class="tags">
+	Tags: 
+	<ul>
+		{% for tag in meta_data.tags %}
+		<li><a href="tag.html#{{ tag }}">{{ tag }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="related">
+	Related stories:
+	<ul>
+		{% set related_count = 0 %}
+		{% for story_key in chron_list %}
+			{% if manifest[story_key]['tags'] | isdisjoint(meta_data.tags) == False and story_key != key %}
+				{% set related_count = related_count +1 %}
+		<li>
+			<a href="{{ story_key }}.html">{{ manifest[story_key]['title'] }}</a>
+			<p>{{ manifest[story_key]['synopsis']}}</p>
+		</li>
+			{% endif %}
+			{% if related_count >= 5 %}{% break %}{% endif %}
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% set title="Mauris ipsum" %}
+{% set body_class="tag" %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="../css/tag.css">
+{% endblock %}
+
+{% block content %}
+
+{{ content }}
+
+<dl>
+{% for tag in tag_map|sort %}
+	<dt>
+		<a name="{{ tag }}" />
+		{{ tag }}
+	</dt>
+	<dd>
+		<ul>
+	{% for key in tag_map[tag] %}
+			<li><a href="{{ key }}.html">{{ manifest[key]['title'] }}</a></li>
+	{% endfor %}
+		</ul>
+	</dd>
+{% endfor %}
+</dl>
+
+{% endblock %}

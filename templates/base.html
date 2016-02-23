@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quisque - {{ title }}</title>
+		<link rel="alternate" type="application/atom+xml" title="Updates" href="atom.xml?type=news" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/global.css">
+		{% block extra_css %}{% endblock %}
+	</head>
+	<body class="{{ body_class }}">
+		<div class="site_header">
+			<a href="/">Doctor Static Example Site</a>
+		</div>
+		<div class="content_frame">
+{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>

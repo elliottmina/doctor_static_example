@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quisque -  Ut fringilla</title>
+		<link rel="alternate" type="application/atom+xml" title="Updates" href="static/atom.xml?type=news" />
+		<link rel="stylesheet" type="text/css" href="css/global.css">
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+		<script type="text/javascript" src="./static/data.js"></script>
+		<script>
+			$(document).ready(function() {
+				var recentContainer = $('.recent ul');
+				for (var i = 0; i < 3; i++) {
+					var key = data.chron_list[i];
+					var item = data.manifest[key];
+
+					var li = $('<li>').appendTo(recentContainer);
+					$('<a>')
+						.appendTo(li)
+						.prop('href', 'static/' + key + '.html')
+						.text(item.title);
+					$('<p>')
+						.appendTo(li)
+						.text(item.synopsis);
+
+				}
+			});
+		</script>
+	</head>
+	<body class="home">
+		<div class="site_header">
+			<a href="/">Doctor Static Example Site</a>
+		</div>
+		<div class="content_frame">
+			<div class="content">
+				<p>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. </p>
+
+				<p>
+					<img src="images/coffee-beans-2-1554429-640x480.jpg" />
+					Nam ad harum audire, reque ubique sea cu. In ius primis definitiones. Eam ut falli sanctus, ad eum audire apeirian forensibus. Agam dicit eligendi sea ex, qui ei dicta solet suavitate. Qui tibique propriae repudiandae ad.  Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+				</p>
+			</div>
+			<div class="recent">
+				Most recent articles
+				<ul></ul>
+				<a href="static/stories.html">More</a>
+			</div>
+		</div>
+	</body>
+</html>
