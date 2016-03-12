@@ -10,7 +10,7 @@
 
 {% block content %}
 <h1>{{ meta_data.title }}</h1>
-<p class="by_when">{{ meta_data.author }}, {{ meta_data.create_date|strftime("%Y-%m-%d") }}
+<p class="by_when">{{ meta_data.author }}, {{ meta_data.create_date|timestamp_to_date|strftime("%Y-%m-%d") }}
 
 <div class="content">
 	{{ content }}
