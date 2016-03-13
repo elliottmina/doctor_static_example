@@ -1,3 +1,4 @@
 __pycache__
 .svn
 docroot/static/*
+!docroot/static/.empty
