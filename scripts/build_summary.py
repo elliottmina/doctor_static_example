@@ -1,9 +1,11 @@
 #!/usr/bin/env python3.5
-import sys
 import json
+import os
 
-manifest_json = sys.argv[1]
-manifest = json.loads(manifest_json)
+base_dir = os.path.dirname(os.path.realpath(__file__))
+manifest_path = base_dir + '/../docroot/static/manifest.json'
+with open(manifest_path, 'r') as stream:
+	manifest = json.load(stream)
 
 count = 0
 tags = []
