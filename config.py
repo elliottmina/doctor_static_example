@@ -4,6 +4,7 @@ base_dir = os.path.dirname(os.path.realpath(__file__))
 CONTENT_SOURCE_DIR = base_dir + '/content'
 TEMPLATE_DIR = base_dir + '/templates'
 RENDER_DIR = base_dir + '/docroot/static'
+PURGE_RENDER_DIR = True
 POST_BUILD_SCRIPTS = [base_dir + '/scripts/build_summary.py']
 SYNDICATION = {
 	'id':'http://example.com/',
